@@ -8,6 +8,7 @@ Before starting please make sure that you have successfully installed the below 
 
 - [Node.js](https://nodejs.org/en/) - is a JavaScript runtime built on Chrome's V8 JavaScript engine. We will use the latest LTS version.
 - [npm](https://www.npmjs.com/) - is the official Nodejs Package Manager (npm) which allows us to manage our dependencies and packages. It is automatically installed with nodejs, so you don't have to install it separately.
+- [git](https://git-scm.com/) / [github account](https://github.com/) - is a version control system for source code and Github is a community site that allows easy creation and collaboration on git projects.
 
 ## Verifying installation
 
