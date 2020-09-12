@@ -1,0 +1,24 @@
+<html>
+  <head></head>
+  <body>
+    <script type="text/javascript">
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (true) {
+            resolve("Happy path!");
+          } else {
+            reject(Error("Something went wrong."));
+          }
+        }, 2000);
+      });
+
+      myPromise
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    </script>
+  </body>
+</html>

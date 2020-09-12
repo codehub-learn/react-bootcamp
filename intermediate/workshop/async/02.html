@@ -1,0 +1,43 @@
+<html>
+  <head></head>
+  <body>
+    <script type="text/javascript">
+      const myPromise1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (true) {
+            resolve("Happy path!");
+          } else {
+            reject(Error("Something went wrong."));
+          }
+        }, 2000);
+      });
+
+      const myPromise2 = new Promise((resolve, _reject) => {
+        setTimeout(() => {
+          resolve("My promise2 resolved!!!");
+        }, 4000);
+      });
+
+      myPromise1
+        .then((data) => {
+          console.log(data);
+
+          return {
+            path: data,
+            moredata: "more data",
+          };
+        })
+        .then((data) => {
+          console.log(data);
+
+          return myPromise2;
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    </script>
+  </body>
+</html>

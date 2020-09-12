@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <script type="text/javascript">
+      async function getJoke() {
+        try {
+          const res = await fetch("http://api.icndb.com/jokes/random");
+          const data = await res.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      getJoke();
+    </script>
+  </body>
+</html>
