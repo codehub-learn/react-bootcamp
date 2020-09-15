@@ -27,6 +27,7 @@ const App = () => {
           <Sidebar />
           <Content className="inner-content">
             <Switch>
+              <Route path="/" component={SimpleInput} />
               <Route exact path="/forms/simple-input" component={SimpleInput} />
               <Route
                 exact
