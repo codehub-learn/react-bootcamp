@@ -27,7 +27,7 @@ const Stats = () => {
               );
 
               return (
-                <Col sm={{ span: 12 }} lg={{ span: 6 }}>
+                <Col key={title} sm={{ span: 12 }} lg={{ span: 6 }}>
                   <Card>
                     <Statistic
                       title={title}
@@ -42,7 +42,7 @@ const Stats = () => {
               );
             } else {
               return (
-                <Col sm={{ span: 12 }} lg={{ span: 6 }}>
+                <Col key={title} sm={{ span: 12 }} lg={{ span: 6 }}>
                   <Card style={{ display: "flex", justifyContent: "center" }}>
                     <Progress type="dashboard" percent={value} width={62} />
                   </Card>
