@@ -11,7 +11,11 @@
 
       const title = "Hello World";
       const myClassName = "container";
-      const element = <div className={`${myClassName}-1`}>{title}</div>;
+
+      // ES5 = var;
+      // ES6/2015 = const / let;
+
+      const element = <div className={"test" + "-2"}>{title}</div>;
 
       ReactDOM.render(element, rootElement);
     </script>

@@ -10,8 +10,14 @@
       const rootElement = document.getElementById("app");
 
       const User = ({ username }) => {
+        const isOK = false;
+        const add = (a, b) => a + b;
+        const result = 5 + 1;
+
         return (
           <div>
+            <p>Result3: {add(3, 2)}</p>
+
             {username ? (
               <React.Fragment>Hello, {username}</React.Fragment>
             ) : (

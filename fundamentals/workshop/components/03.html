@@ -10,6 +10,7 @@
       const rootElement = document.getElementById("app");
 
       const MyDiv = (props) => {
+        console.log(props);
         return <div>{props.children}</div>;
       };
 
@@ -17,7 +18,7 @@
         <div className="container">
           <MyDiv>Hello World</MyDiv>
           <MyDiv>
-            Welcome to Code.Hub
+            <p>Welcome to Code.Hub</p>
             <MyDiv>Hi I'm a component</MyDiv>
           </MyDiv>
           <MyDiv>

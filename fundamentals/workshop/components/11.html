@@ -13,11 +13,11 @@
         return (
           <div>
             {list.length > 0 && (
-              <div>
+              <ul>
                 {list.map((color) => (
-                  <span key={color}>{color},&nbsp;</span>
+                  <li key={color}>{color}</li>
                 ))}
-              </div>
+              </ul>
             )}
           </div>
         );

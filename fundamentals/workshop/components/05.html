@@ -27,16 +27,19 @@
       ];
 
       const Widget = (props) => {
+        console.log(props.data);
         return (
           <div>
             <h2>{props.title}</h2>
             <img width="30" height="30" src={props.logo} />
+
             {props.data.map((entry) => {
               return (
                 <div key={entry.title}>
                   <h3>{entry.title}</h3>
                   <p>
-                    {entry.number} &nbsp;<span>{entry.percentage}</span>
+                    {entry.number} &nbsp;
+                    <span>{entry.percentage}</span>
                   </p>
                 </div>
               );
