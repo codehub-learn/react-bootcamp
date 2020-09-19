@@ -10,6 +10,7 @@
       const Avatar = () => {
         const [profile, setProfile] = React.useState({
           id: 10,
+          age: 37,
           user: {
             username: "tsevdos",
             name: "John Tsevdos",
@@ -17,13 +18,16 @@
           },
         });
         const changeName = () => {
-          setProfile((profile) => ({
+          const newProfile = {
             ...profile,
+            age: 40,
             user: {
               ...profile.user,
               name: "New Name",
             },
-          }));
+          };
+
+          setProfile(newProfile);
         };
 
         return (

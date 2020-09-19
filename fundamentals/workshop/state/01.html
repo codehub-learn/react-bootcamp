@@ -8,12 +8,14 @@
     <div id="app"></div>
     <script type="text/babel">
       const LikeCount = () => {
-        const [counter, setCounter] = React.useState(0);
+        var [counter, setCounter] = React.useState(0);
+
         const handleLike = () => {
-          setCounter((counter) => counter + 1);
+          counter = counter + 1;
         };
+
         const handleDislike = () => {
-          setCounter((counter) => counter - 1);
+          counter = counter - 1;
         };
 
         return (
