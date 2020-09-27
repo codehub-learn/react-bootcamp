@@ -9,7 +9,7 @@ const AppFooter = () => (
     <span role="img" aria-label="love">
       ❤️
     </span>{" "}
-    in Athens, Greece.
+    in Greece.
   </Footer>
 );
 
