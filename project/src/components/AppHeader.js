@@ -18,9 +18,9 @@ const AppHeader = () => {
           Models
           <Link to="/models" />
         </Menu.Item>
-        <Menu.Item key="page-1">
-          Page 1
-          <Link to="/page-1" />
+        <Menu.Item key="stats">
+          Stats
+          <Link to="/stats" />
         </Menu.Item>
       </Menu>
     </Header>

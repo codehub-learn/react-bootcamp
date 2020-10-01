@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Layout, Typography } from "antd";
+import { Layout } from "antd";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 import TeamMembers from "./components/TeamMembers";
 import Models from "./components/Models";
+import Stats from "./components/Stats";
 
-const { Title } = Typography;
 const { Content } = Layout;
 
 const App = () => (
@@ -19,8 +19,8 @@ const App = () => (
             <Route exact path="/models">
               <Models />
             </Route>
-            <Route exact path="/page-1">
-              <Title>Page 1</Title>
+            <Route exact path="/stats">
+              <Stats />
             </Route>
             <Route path="/">
               <TeamMembers />
