@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Typography, Divider, Row, Col, Spin } from "antd";
 import {
   ResponsiveContainer,

@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
@@ -15,17 +14,11 @@ const App = () => (
       <AppHeader />
       <Content className="main-container">
         <div className="content">
-          <Switch>
-            <Route exact path="/models">
-              <Models />
-            </Route>
-            <Route exact path="/stats">
-              <Stats />
-            </Route>
-            <Route path="/">
-              <TeamMembers />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/models" element={<Models />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/" element={<TeamMembers />} />
+          </Routes>
         </div>
       </Content>
       <AppFooter />

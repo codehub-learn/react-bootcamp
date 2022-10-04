@@ -1,4 +1,3 @@
-import React from "react";
 import { List, Typography, Divider, Avatar } from "antd";
 import team from "../data/teamMembers";
 

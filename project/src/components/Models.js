@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Card,
   Typography,
@@ -10,7 +10,7 @@ import {
   Button,
   Divider,
 } from "antd";
-// import { makeModelsPost } from "../api/api";
+import { makeModelsPost } from "../api/api";
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -51,9 +51,9 @@ const Models = () => {
 
     // Make the POST HTTP request here
     // Sample POST file api/api.js
-    // makeModelsPost(formValues).then((responseData) => {
-    //   setModels(responseData);
-    // });
+    makeModelsPost(formValues).then((responseData) => {
+      setModels(responseData);
+    });
   };
 
   return (
