@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -26,37 +25,30 @@ const App = () => {
         <Layout>
           <Sidebar />
           <Content className="inner-content">
-            <Switch>
-              <Route exact path="/forms/simple-input" component={SimpleInput} />
+            <Routes>
+              <Route path="/forms/simple-input" element={<SimpleInput />} />
               <Route
-                exact
                 path="/forms/input-and-textarea"
-                component={InputTextarea}
+                element={<InputTextarea />}
               />
               <Route
-                exact
                 path="/forms/select-radio-button-checkbox"
-                component={SelectRadioButtonCheckbox}
+                element={<SelectRadioButtonCheckbox />}
               />
+              <Route path="/forms/form-submit-async" element={<FormSubmit />} />
               <Route
-                exact
-                path="/forms/form-submit-async"
-                component={FormSubmit}
-              />
-              <Route
-                exact
                 path="/forms/ant-design-form-submit"
-                component={AntFormSubmit}
+                element={<AntFormSubmit />}
               />
 
-              <Route exact path="/use-effect/00" component={UseEffect00} />
-              <Route exact path="/use-effect/01" component={UseEffect01} />
-              <Route exact path="/use-effect/02" component={UseEffect02} />
-              <Route exact path="/use-effect/03" component={UseEffect03} />
+              <Route path="/use-effect/00" element={<UseEffect00 />} />
+              <Route path="/use-effect/01" element={<UseEffect01 />} />
+              <Route path="/use-effect/02" element={<UseEffect02 />} />
+              <Route path="/use-effect/03" element={<UseEffect03 />} />
 
-              <Route exact path="/charts/demo-1" component={DemoPage1} />
-              <Route exact path="/charts/demo-2" component={DemoPage2} />
-            </Switch>
+              <Route path="/charts/demo-1" element={<DemoPage1 />} />
+              <Route path="/charts/demo-2" element={<DemoPage2 />} />
+            </Routes>
             <footer>
               Made with{" "}
               <span role="img" aria-label="love">

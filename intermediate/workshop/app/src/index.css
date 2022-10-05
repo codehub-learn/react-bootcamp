@@ -2,6 +2,10 @@ body {
   background: #f0f2f5;
 }
 
+#root, .layout-container {
+  height: 100%;
+}
+
 .header {
   display: flex;
 }
@@ -12,19 +16,20 @@ body {
   font-weight: bold;
 }
 
-.layout-container {
-  height: 100vh;
-}
-
 .inner-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 24px;
+  height: auto;
 }
 
 .demo-container {
   padding: 24px;
+}
+
+.ant-row {
+  margin: 0 0 24px;
 }
 
 footer {

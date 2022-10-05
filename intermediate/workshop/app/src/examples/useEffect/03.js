@@ -7,13 +7,19 @@ const UseEffectDemo3 = () => {
   const [y, setY] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("mousemove", (e) => {
+    const handleMouseMove = (e) => {
       // console.log(e);
       const { clientX, clientY } = e;
       console.log(clientX, clientY);
       setX(clientX);
       setY(clientY);
-    });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // return () => {
+    //   window.removeEventListener("mousemove", handleMouseMove, false);
+    // };
   }, []);
 
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography, Divider, Row, Col } from "antd";
 import Stats from "./components/Stats";
 import LineChart from "./components/LineChart";

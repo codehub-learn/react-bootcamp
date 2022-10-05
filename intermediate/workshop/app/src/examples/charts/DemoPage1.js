@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography, Divider, Row, Col, Statistic, Card, Progress } from "antd";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import {

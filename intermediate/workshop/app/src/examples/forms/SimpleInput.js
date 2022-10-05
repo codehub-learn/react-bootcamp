@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Typography } from "antd";
 
 const { Title } = Typography;
@@ -14,6 +14,7 @@ const SimpleInput = () => {
       <Title>Input</Title>
       <label htmlFor="name">Name:</label>
       <input type="text" name="name" value={val} onChange={updateName} />
+      <h1>{val}</h1>
     </div>
   );
 };
