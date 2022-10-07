@@ -15,10 +15,12 @@ import {
   Bar,
   PieChart,
   Pie,
+  Cell,
 } from "recharts";
 import { getStats } from "../api/api";
 
 const { Title } = Typography;
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const Stats = () => {
   const [statsData, setStatsData] = useState(null);
@@ -151,9 +153,15 @@ const Stats = () => {
                         data={statsData.pieChart}
                         dataKey="value"
                         outerRadius={100}
-                        fill="#8884d8"
                         label
-                      />
+                      >
+                        {statsData.pieChart.map((entry, index) => (
+                          <Cell
+                            key={`cell-${entry.name}`}
+                            fill={COLORS[index % COLORS.length]}
+                          />
+                        ))}
+                      </Pie>
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
